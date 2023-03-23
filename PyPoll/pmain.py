@@ -1,6 +1,6 @@
 import csv
 
-with open("resources/electiondata.csv") as electdata:
+with open("resources/election_data.csv") as electdata:
     electreader = csv.reader(electdata, delimiter=',')
     header = next(electreader)
     
