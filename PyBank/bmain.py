@@ -1,23 +1,93 @@
 #importing csv file from resources
 import csv
+from pathlib import Path
 
 with open("Resources/budget_data.csv", newline='') as budcsv:
     infocsv = csv.reader(budcsv, delimiter=',')
     header = next(infocsv)
 
     date=[]
-    gains=[]
+    gainloss=[]
+    prolos = 0
+    roundone=0
+    total=0
+    averagec=0
+    v1 = 0
+    v1_line1 = 0
+    v2 = 0
+    v2_line2 = 0
 
-#number of months in the csvfile
+    #setting up the lists & getting number of months
     for row in infocsv:
         date.append(row[0])
-        monthnum = len(date)
+        gainloss.append(int(row[1]))
+        
+        datec = len(date)
 
-        gains.append(row[1])
-    print(gains)
-    #print(monthnum)
+    for roundone in range(datec):
+        total = total+int(gainloss[roundone])
 
-    
+    for roundtwo in range(datec-1):
+        averagec = averagec+(float(gainloss[roundtwo+1])-float(gainloss[roundtwo]))
+
+        changem = (float(gainloss[roundtwo+1]) - float(gainloss[roundtwo]))
+        if changem> v1:
+            v1 = changem
+            v1_line1 = roundtwo
+        else:
+            v1=v1
+
+        if changem<v2:
+            v2 = changem    
+            v2_line2 = roundtwo
+        else:
+            v2 = v2
+
+analysis = f'\
+------------------------\n\
+Financial Analysis\n\
+Total Months: {datec}\n\
+Total: ${total}\n\
+Average Change: ${round(averagec/(datec-1)),2}\n\
+Greatest Increase in Profits: {date[v1_line1 + 1]} (${int(v1)})\n\
+Greatest Decrease in Profits: {date[v2_line2 + 1]} (${int(v2)})\n'
+
+print(analysis)
+
+Analysisfile = Path("python-challenge","PyBank","analysis", "Analysisfile.txt")
+with open(Analysisfile,"w") as file:
+    Analysisfile.write(analysis)
+    Analysisfile.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # getting profit/loss
+    #for i in range(len(gains)):
+        #prolos.append(gains[i+1]-gains[i])
+
+#max and minimum functions 
+#maxgain= max(prolos)
+#maxloss= min(prolos)
+
+#maxgain_m = prolos.index(max(prolos))+1
+#maxloss_m = prolos.index(min(prolos))+1
+
+
+
+        
+
 
 
 
