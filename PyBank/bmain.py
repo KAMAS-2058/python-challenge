@@ -1,6 +1,6 @@
 #importing csv file from resources
 import csv
-from pathlib import Path
+import os.path
 
 with open("Resources/budget_data.csv", newline='') as budcsv:
     infocsv = csv.reader(budcsv, delimiter=',')
@@ -54,10 +54,10 @@ Greatest Decrease in Profits: {date[v2_line2 + 1]} (${int(v2)})\n'
 
 print(analysis)
 
-Analysisfile = Path("python-challenge","PyBank","analysis", "Analysisfile.txt")
-with open(Analysisfile,"w") as file:
-    Analysisfile.write(analysis)
-    Analysisfile.close()
+
+Analysisfile = open("analysis","pybank.txt","w")
+Analysisfile.writelines(analysis)
+Analysisfile.close()
 
 
 
