@@ -9,14 +9,21 @@ with open("resources/election_data.csv") as electdata:
     county =[]
     candidate = []
     votec = 0
+    who = 0
 
     for row in electreader:
         bid.append(row[0])
         county.append(row[1])
         candidate.append(row[2])
 
+    balcount = int(len(bid))
+    
+    canname =[]       
+    canname.append(candidate[0])
 
-    bid_count = len(bid)
-    for votec in range(bid_count):
-        votec = votec + (int[bid_count])
-        print(votec)
+    for who in range(balcount):
+        if candidate[who+1] != candidate[who] and candidate[who+1] not in canname:
+            canname.append(candidate[who+1])
+
+    n = len(canname)
+
