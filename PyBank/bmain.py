@@ -55,10 +55,7 @@ Greatest Decrease in Profits: {date[v2_line2 + 1]} (${int(v2)})\n'
 print(analysis)
 
 
-open("python-challenge/PyBank/analysis","w")
-
-#Analysisfile = 
-#Analysisfile = open("analysis","pybank.txt","w")
-#Analysisfile.writelines(analysis)
-#Analysisfile.close()
+Analysisfile = open("analysis","pybank.txt","w")
+Analysisfile.writelines(analysis)
+Analysisfile.close()
  
