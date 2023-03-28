@@ -55,39 +55,10 @@ Greatest Decrease in Profits: {date[v2_line2 + 1]} (${int(v2)})\n'
 print(analysis)
 
 
-Analysisfile = open("analysis","pybank.txt","w")
-Analysisfile.writelines(analysis)
-Analysisfile.close()
+open("python-challenge/PyBank/analysis","w")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # getting profit/loss
-    #for i in range(len(gains)):
-        #prolos.append(gains[i+1]-gains[i])
-
-#max and minimum functions 
-#maxgain= max(prolos)
-#maxloss= min(prolos)
-
-#maxgain_m = prolos.index(max(prolos))+1
-#maxloss_m = prolos.index(min(prolos))+1
-
-
-
-        
-
-
-
-
+#Analysisfile = 
+#Analysisfile = open("analysis","pybank.txt","w")
+#Analysisfile.writelines(analysis)
+#Analysisfile.close()
+ 
