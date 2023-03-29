@@ -22,9 +22,9 @@ with open("resources/election_data.csv") as electdata:
     #print(balcount)
 
 #finding the available candidates that received votes
-for element in candidate:
-    if element not in options:
-        options.append(element)
+# for element in candidate:
+#     if element not in options:
+#         options.append(element)
 
 
 
