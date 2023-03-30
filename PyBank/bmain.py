@@ -44,8 +44,8 @@ with open("Resources/budget_data.csv", newline='') as budcsv:
             v2 = v2
 
 analysis = f'\
-------------------------\n\
 Financial Analysis\n\
+------------------------\n\
 Total Months: {datec}\n\
 Total: ${total}\n\
 Average Change: ${round(averagec/(datec-1)),2}\n\

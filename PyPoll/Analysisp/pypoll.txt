@@ -1,0 +1,10 @@
+Election Results!!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Total Turnout of: 369711
+The Election Results!:
+['Charles Casper Stockham', 'Diana DeGette', 'Raymon Anthony Doane']
+[85213, 272892, 11606]
+['0.23', '0.74', '0.03']
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Congratulations Diana DeGette
+With 272892 Votes!!!
